@@ -16,7 +16,7 @@ public class VendingMachine {
 
         while (true) {
             System.out.println("Доступные для покупки позиции: ");
-            Cookies.availableProducts(logger);
+            Cookies.availableProducts();
 
             System.out.print("Введите номер товара или -1 для завершения работы ");
             try {
@@ -45,7 +45,7 @@ public class VendingMachine {
                     return;
                 }
 
-                MoneyOperation.payment(selectedItem, clientProdPrice, logger);
+                MoneyOperation.payment(selectedItem, clientProdPrice);
 
             } else {
                 System.out.println("Товара нет. Проверьте идентификатор!");

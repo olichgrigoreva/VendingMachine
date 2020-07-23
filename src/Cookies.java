@@ -1,3 +1,4 @@
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public enum Cookies {
@@ -13,7 +14,9 @@ public enum Cookies {
         return price;
     }
 
-    public static void availableProducts(Logger logger) {
+    private static final Logger logger = LogManager.getLogger(Cookies.class);
+
+    public static void availableProducts() {
         Cookies[] values = Cookies.values();
         for (int i = 0; i < values.length; i++) {
             Cookies cookie = values[i];
